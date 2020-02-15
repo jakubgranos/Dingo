@@ -1,4 +1,5 @@
 <?php
+get_header();
 
 // Check value exists.
 if( have_rows('sections') ):
@@ -25,3 +26,5 @@ if( have_rows('sections') ):
 else :
     // Do something...
 endif;
+
+get_footer();
