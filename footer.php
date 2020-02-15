@@ -1,13 +1,12 @@
 <?php
 /*
-  Template for footer
-  @package Dingo
-
+	Template for footer
+	@package Dingo
 */ 
 ?>
 
 <footer>
-  <?php wp_footer();?>
+	<?php wp_footer();?>
 </footer>
 
 </body>
