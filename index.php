@@ -1,7 +1,7 @@
 <?php
 /*
-	Template for index
-	@package Dingo
+  Template for index
+  @package Dingo
 */ 
 get_header();
 
