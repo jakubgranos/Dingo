@@ -1,6 +1,6 @@
 <?php
 /*
-  Template for enqueue
+  theme enqueue
   @package Dingo
 */ 
   function dingo_load_scripts() {

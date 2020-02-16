@@ -1,5 +1,6 @@
 <?php
 get_header();
+require_once('theme-parts/header/header.php');
 // Check value exists.
 if( have_rows('sections') ):
   // Loop through rows.

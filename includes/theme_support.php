@@ -1,0 +1,11 @@
+<?php
+/*
+  Theme support file
+  @package Dingo
+*/
+
+// Activate all menus in Dingo Project
+function register_dingo_menus() {
+  register_nav_menus( array( 'header_menu' => __('Page Navigation Menu') ) );
+}
+add_action('init', 'register_dingo_menus');

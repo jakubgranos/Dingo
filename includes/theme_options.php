@@ -1,5 +1,8 @@
 <?php
-
+/*
+  Theme options 
+  @package Dingo
+*/
   add_action('acf/init', 'my_acf_op_init');
   function my_acf_op_init() {
 
