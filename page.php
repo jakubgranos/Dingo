@@ -1,7 +1,7 @@
 <?php
 get_header();
 
-require_once('theme-parts/header/header.php');
+require_once('theme-parts/navigation.php');
 
 if( have_rows('sections') ):
   while ( have_rows('sections') ):
