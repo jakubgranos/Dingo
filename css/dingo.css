@@ -1,5 +1,4 @@
 .heder-nav ul {
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   padding-left: 0;
@@ -19,6 +18,32 @@
   font-size: 16px;
   padding: 0px 22px !important;
   font-family: "Lora", serif;
+}
+
+.dropdown-menu li {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+.dropdown-menu li a {
+  font-size: 14px;
+  padding: 9px 18px !important;
+  font-family: "Lora", serif;
+}
+
+@media (max-width: 991px) {
+  .dropdown .dropdown-menu {
+    transform: scale(1, 0);
+    display: none;
+    position: inherit;
+  }
 }
 
 /*# sourceMappingURL=dingo.css.map */
