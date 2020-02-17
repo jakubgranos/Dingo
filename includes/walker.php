@@ -1,9 +1,7 @@
 <?php
 /*
-  @package AdamesTheme
- ==============
-    Wallker class
- ==============
+  Theme walker file
+  @package Dingo
 */
 
 class Dingo_Walker_header_nav extends  Walker_Nav_menu {
