@@ -1,0 +1,27 @@
+.heder-nav {
+
+  & ul {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    @media (min-width: 992px) {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    }
+
+    & li {
+      & a {
+        display: block;
+        padding: .5rem 1rem;
+        color: #2c3033 !important;
+        font-size: 16px;
+        padding: 0px 22px !important;
+        font-family: "Lora", serif;
+      }
+    }
+  }
+}
