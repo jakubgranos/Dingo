@@ -13,16 +13,22 @@ $walker = new  Dingo_Walker_header_nav;?>
     <div class="row align-items-center">
       <div class="col-lg-12">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="/home"><img src="<?php echo $logo;?>" alt="logo"></a>
+          <?php if(!empty($logo)):?>  
+            <a class="navbar-brand" href="/home">
+              <img src="<?php echo $logo;?>" alt="logo">
+            </a>
+          <?php endif;?>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse main-menu-item justify-content-end heder-nav" id="navbarSupportedContent">
             <?php wp_nav_menu( array('theme_location' => 'header_menu', 'walker' => $walker) );?>
           </div>
-          <div class="menu_btn">
-            <a href="<?php echo $button['url'];?>" class="btn_1 d-none d-sm-block"><?php echo $button['title'];?></a>
-          </div>          
+          <?php if(!empty($button)):?>
+            <div class="menu_btn">
+              <a href="<?php echo $button['url'];?>" target="<?php echo $button['target']?>" class="btn_1 d-none d-sm-block"><?php echo $button['title'];?></a>
+            </div>
+          <?php endif;?>          
         </nav>
       </div>
     </div>
