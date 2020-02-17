@@ -3,17 +3,20 @@ get_header();
 
 require_once('theme-parts/navigation.php');
 
-if( have_rows('sections') ):
-  while ( have_rows('sections') ):
-  switch(the_row()) {
-    case get_row_layout() == 'section_menu':
-      require_once('theme-parts/sections/section_menu.php');
-    break;
-    case get_row_layout() == 'section_contact':
-      require_once('theme-parts/sections/section_contact.php');
-    break;
+class PageSections {
+  private static $blocks = array(
+    'section_menu' => 'section_menu.php',
+    'section_contact' => 'section_contact.php',
+  );
+  public static function display($field_name = 'sections', $sec_param = null){
+    while( have_rows( $field_name, $sec_param ) ): the_row();
+      $block_layout = get_row_layout();
+      if (isset(self::$blocks[$block_layout]) ): require_once( "theme-parts/sections/" . self::$blocks[$block_layout] );
+      endif;
+    endwhile;
   }
-  endwhile;
-endif;
+}
+
+PageSections::display();
 
 get_footer();
