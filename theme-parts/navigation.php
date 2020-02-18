@@ -1,6 +1,6 @@
 <?php
 /*
-  Template for header part
+  Template for navigation part
   @package Dingo
 */
 $logo = get_field('theme_logo', 'option');
