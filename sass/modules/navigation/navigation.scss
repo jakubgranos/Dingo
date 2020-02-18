@@ -4,26 +4,29 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-}
-@media (min-width: 992px) {
-  .heder-nav ul {
+
+  @media (min-width: 992px) {
     -ms-flex-direction: row;
     flex-direction: row;
   }
+
+  & li {
+    & a {
+      display: block;
+      padding: .5rem 1rem;
+      color: #2c3033 !important;
+      font-size: 16px;
+      padding: 0px 22px !important;
+      font-family: "Lora", serif;
+    }
+  }
 }
-.heder-nav ul li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: #2c3033 !important;
-  font-size: 16px;
-  padding: 0px 22px !important;
-  font-family: "Lora", serif;
-}
+
 
 .dropdown-menu li {
   display: block;
   width: 100%;
-  padding: 0.25rem 1.5rem;
+  padding: .25rem 1.5rem;
   clear: both;
   font-weight: 400;
   color: #212529;
@@ -31,12 +34,14 @@
   white-space: nowrap;
   background-color: transparent;
   border: 0;
+
+  & a {
+    font-size: 14px;
+    padding: 9px 18px !important;
+    font-family: "Lora", serif;
+  }
 }
-.dropdown-menu li a {
-  font-size: 14px;
-  padding: 9px 18px !important;
-  font-family: "Lora", serif;
-}
+
 
 @media (max-width: 991px) {
   .dropdown .dropdown-menu {
@@ -45,5 +50,3 @@
     position: inherit;
   }
 }
-
-/*# sourceMappingURL=dingo.css.map */
