@@ -10,7 +10,6 @@ $banner_under_heading = get_sub_field('banner_under_heading');
 $banner_reservation_button = get_sub_field('banner_reservation_button');
 $banner_video_button = get_sub_field('banner_video_button');
 
-// variables to grab icon path in buttons
 $icon_reservation_button = get_template_directory_uri() . '/images/icons/left_1.svg';
 $icon_play_button = get_template_directory_uri() . '/images/icons/play.svg';?>
 
