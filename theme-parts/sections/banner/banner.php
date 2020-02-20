@@ -34,7 +34,7 @@ $icon_play_button = get_template_directory_uri() . '/images/icons/play.svg';?>
     </div>
   <?php endif;?>
 
-  <?php if (!empty($banner_reservation_button)): ?>
+  <?php if (!empty($banner_video_button)): ?>
     <a href="<?php echo $banner_video_button['url']; ?>" class="popup-youtube video_popup">
     <span><img src="<?php echo $icon_play_button; ?>" alt="icon play button"></span><?php echo $banner_video_button['title']; ?></a>
   <?php endif;?>
