@@ -4,7 +4,6 @@
   @package Dingo
 */
 ?>
-
 <div class="banner_text">
   <div class="banner_text_iner">
     <?php
