@@ -3,39 +3,38 @@
 Template for banner
 @package Dingo
  */
-
-$banner_text_above = get_sub_field('banner_text_above');
-$banner_text_heading = get_sub_field('banner_text_heading');
-$banner_under_heading = get_sub_field('banner_under_heading');
-$banner_reservation_button = get_sub_field('banner_reservation_button');
-$banner_video_button = get_sub_field('banner_video_button');
+$text = get_sub_field('banner_text');
 
 $icon_reservation_button = get_template_directory_uri() . '/images/icons/left_1.svg';
-$icon_play_button = get_template_directory_uri() . '/images/icons/play.svg';?>
+$icon_play_button = get_template_directory_uri() . '/images/icons/play.svg';
 
-<?php if (!empty($banner_text_above)): ?>
-  <h5><?php echo $banner_text_above; ?></h5>
-<?php endif;?>
+$reservation_button = get_sub_field('banner_reservation_button');
+$reservation_button_title = $reservation_button['title'];
+$reservation_button_args = [
+  'class' => 'btn_2',
+  'content' => "$reservation_button_title<img src='$icon_reservation_button' alt='flag icon'/>",
+];
 
-<?php if (!empty($banner_text_heading)): ?>
-  <h1><?php echo $banner_text_heading; ?></h1>
-<?php endif;?>
+$video_button = get_sub_field('banner_video_button');
+$video_button_title = $video_button['title'];
+$video_button_args = [
+  'class' => 'popup-youtube video_popup',
+  'content' => "<span><img src='$icon_play_button' alt='icon play button'></span>$video_button_title",
+];
 
-<?php if (!empty($banner_under_heading)): ?>
-  <p><?php echo $banner_under_heading; ?></p>
-<?php endif;?>
+if (!empty($text)):
+  echo $text;
+endif;
+?>
 
 <div class="banner_btn">
-  <?php if (!empty($banner_reservation_button)): ?>
+  <?php if (!empty($reservation_button)): ?>
     <div class="banner_btn_iner">
-      <a href="<?php echo $banner_reservation_button['url']; ?>" target="<?php echo $banner_reservation_button['target']; ?>" class="btn_2"><?php echo $banner_reservation_button['title']; ?>
-        <img src="<?php echo $icon_reservation_button; ?>">
-      </a>
+      <?php echo wpc_get_link($reservation_button, $reservation_button_args); ?>
     </div>
   <?php endif;?>
 
-  <?php if (!empty($banner_video_button)): ?>
-    <a href="<?php echo $banner_video_button['url']; ?>" class="popup-youtube video_popup">
-    <span><img src="<?php echo $icon_play_button; ?>" alt="icon play button"></span><?php echo $banner_video_button['title']; ?></a>
+  <?php if (!empty($video_button)): ?>
+    <?php echo wpc_get_link($video_button, $video_button_args); ?>
   <?php endif;?>
 </div>
