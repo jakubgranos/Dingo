@@ -15,4 +15,6 @@ Template for head
   <?php wp_head();?>
 </head>
 <body>
-<?php require_once 'theme-parts/sections/navigation/navigation_container.php'; ?>
+<header class="header main_menu home_menu">
+  <?php require_once 'theme-parts/sections/navigation/navigation_container.php'; ?>
+</header>
