@@ -1,6 +1,6 @@
 <?php 
 /*
-  Banner post repeater
+  Theme banner post repeater
   @package Dingo
 */
 function banner_post_repeater() {

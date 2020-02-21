@@ -1,4 +1,8 @@
 <?php
+/*
+  Theme section
+  @package Dingo
+*/
 
 class PageSections {
   private static $blocks = array(

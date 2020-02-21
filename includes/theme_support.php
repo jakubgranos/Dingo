@@ -1,8 +1,8 @@
 <?php
 /*
-Theme support file
-@package Dingo
- */
+  Theme support file
+  @package Dingo
+*/
 
 // Activate all menus in Dingo Project
 function register_dingo_menus() {

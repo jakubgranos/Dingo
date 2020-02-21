@@ -1,8 +1,8 @@
 <?php
 /*
-Template for navigation container part
-@package Dingo
- */
+  Template for navigation container part
+  @package Dingo
+*/
 ?>
 
 

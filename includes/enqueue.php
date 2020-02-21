@@ -1,8 +1,8 @@
 <?php
 /*
-theme enqueue
-@package Dingo
- */
+  theme enqueue
+  @package Dingo
+*/
 function dingo_load_scripts() {
   // css / scss / others
   wp_enqueue_style('dingo_css', get_template_directory_uri() . './css/dingo.css', array(), '1.0.0', 'all');

@@ -2,7 +2,7 @@
 /*
   Template for index
   @package Dingo
-*/ 
+*/
 get_header();
 
 

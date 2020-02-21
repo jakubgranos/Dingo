@@ -1,8 +1,8 @@
 <?php
 /*
-Template for head
-@package Dingo
- */
+  Template for head
+  @package Dingo
+*/
 ?>
 
 <!DOCTYPE html>

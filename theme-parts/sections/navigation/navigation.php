@@ -1,8 +1,8 @@
 <?php
 /*
-Template for navigation part
-@package Dingo
- */
+  Template for navigation part
+  @package Dingo
+*/
 $logo = get_field('theme_logo', 'option');
 $button = get_field('theme_nav_button', 'option');
 $walker = new Dingo_Walker_header_nav;?>

@@ -1,8 +1,8 @@
 <?php
 /*
-Template for footer
-@package Dingo
- */
+  Template for footer
+  @package Dingo
+*/
 ?>
 
 <footer>
