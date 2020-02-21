@@ -1,4 +1,8 @@
 <?php
+/*
+  Template for banner
+  @package Dingo
+*/
 function wpc_get_link($acf_link, $args = null) {
   if (empty($acf_link) || empty($acf_link['url'])) {
     return null;
