@@ -20,13 +20,14 @@ $overlay_image = get_sub_field('backgorund_overlay_image');?>
       background-color: #f0eed4;
     }
   }
-  
+
   <?php if (!empty($overlay_image)): ?>
     .banner_part:after {
       background-image: url('<?php echo $overlay_image; ?>');
     }
   <?php endif;?>
 </style>
+
 <section class="banner_part">
   <div class="container">
     <div class="row align-items-center">
