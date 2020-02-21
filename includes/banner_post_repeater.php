@@ -4,34 +4,34 @@
   @package Dingo
 */
 function banner_post_repeater() {
-  if (have_rows('button_action')):
-    while (have_rows('button_action')): the_row();
-      $button_title = get_sub_field_object('button_title')['value'];
+  if (have_rows('button_repeater')):
+    while (have_rows('button_repeater')): the_row();
+      $type = get_sub_field_object('type')['value'];
     
-      $button_link = get_sub_field_object('button_link')['value'];
-      $button_link_title = $button_link['title'];
+      $link = get_sub_field_object('link')['value'];
+      $link_text = $link['title'];
 
-      $button_image = get_sub_field_object('button_image')['value'];
+      $icon = get_sub_field_object('icon')['value'];
   
-      // use reservation class button when is reservation
-      if($button_title === 'Reservation'):
-        $button_link_args = [
+      // use reservation class for animated border
+      if($type === 'Animated border'):
+        $link_args = [
           'class' => 'btn_2',
-          'content' => "$button_link_title<img src='$button_image' alt='flag icon'/>",
+          'content' => "$link_text<img src='$icon' alt='flag icon'/>",
         ];?>
         <div class="banner_btn_iner">
-          <?php echo wpc_get_link($button_link, $button_link_args); ?>
+          <?php echo wpc_get_link($link, $link_args); ?>
         </div>
       <?php
       endif;
   
-      // use popup class buton when is Video
-      if($button_title === 'Video'):
-        $button_link_args = [
+      // use popup class for icon with label
+      if($type === 'Icon with label'):
+        $ink_args = [
           'class' => 'popup-youtube video_popup',
-          'content' => "<span><img src='$button_image' alt='icon play button'></span>$button_link_title",
+          'content' => "<span><img src='$icon' alt='icon play button'></span>$link_text",
         ];?>
-          <?php echo wpc_get_link($button_link, $button_link_args); ?>
+          <?php echo wpc_get_link($link, $ink_args); ?>
       <?php
       endif;
     endwhile;
