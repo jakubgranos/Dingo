@@ -34,16 +34,6 @@ function banner_post_repeater() {
           <?php echo wpc_get_link($button_link, $button_link_args); ?>
       <?php
       endif;
-
-      // use defalut button when is not  reservation and video
-      if($button_title !== 'Reservation' || $button_title !== 'Video'):
-        $button_link_args = [
-          'class' => 'btn default',
-          'content' => "$button_link_title<img src='$button_image' alt='$button_link_title'/>",
-        ];?>
-          <?php echo wpc_get_link($button_link, $button_link_args); ?>
-      <?php
-      endif;
     endwhile;
   endif;
 }
