@@ -1,7 +1,9 @@
 <?php
+/*
+  Template for page
+  @package Dingo
+*/
 get_header();
-
-require_once('theme-parts/navigation.php');
 
 PageSections::display();
 

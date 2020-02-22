@@ -15,3 +15,6 @@
   <?php wp_head();?>
 </head>
 <body>
+<header class="header main_menu home_menu">
+  <?php require_once 'theme-parts/sections/navigation/navigation_container.php'; ?>
+</header>

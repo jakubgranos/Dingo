@@ -2,7 +2,7 @@
 /*
   Template for footer
   @package Dingo
-*/ 
+*/
 ?>
 
 <footer>
