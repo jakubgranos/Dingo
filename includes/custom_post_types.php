@@ -28,10 +28,10 @@ function popular_posts() {
     'rewrite' => true,
     'capability_type' => 'post',
     'hierarchical' => false,
-    'support' => array(
+    'supports' => array(
       'title',
       'editor',
-      'exerpt',
+      'excerpt',
       'thumbnail',
       'revisions'
     ),
@@ -41,5 +41,4 @@ function popular_posts() {
   );
   register_post_type('popular-post', $args);
 }
-
 add_action('init','popular_posts');
