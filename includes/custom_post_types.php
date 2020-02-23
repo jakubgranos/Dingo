@@ -4,17 +4,17 @@
   @package Dingo
 */
 
-function popular_posts() {
+function menu_post_type() {
   $labels = array(
-    'name' => 'Popular posts',
-    'singular_name' => 'Popular post',
+    'name' => 'Menu',
+    'singular_name' => 'Menu',
     'add_new' => 'Add post',
     'all_items' => 'All posts',
     'add_new_item' => 'Add post',
     'edit_titem' => 'Edit Post',
     'new_item' => 'New Post',
     'view_item' => 'View Post',
-    'search_item' => 'Search popular posts',
+    'search_item' => 'Search menu posts',
     'not_found' => 'No posts found',
     'not_found_in_trash' => 'No posts found in trash',
     'parent_item_colon' => 'Parent Post'
@@ -39,6 +39,6 @@ function popular_posts() {
     'menu_position' => 4,
     'exclude_from_search' => false
   );
-  register_post_type('popular-post', $args);
+  register_post_type('menu', $args);
 }
-add_action('init','popular_posts');
+add_action('init','menu_post_type');

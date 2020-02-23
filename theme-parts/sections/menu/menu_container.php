@@ -1,6 +1,6 @@
 <?php
 /*
-  Template for popular posts 
+  Template for menu container 
   @package Dingo
 */
   $title = get_sub_field('menu_title');

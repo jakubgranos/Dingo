@@ -1,6 +1,6 @@
 <?php
 /*
-  Template for popular posts 
+  Template for menu posts 
   @package Dingo
 */
 global $post;
