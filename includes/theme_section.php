@@ -7,7 +7,7 @@
 class PageSections {
   private static $blocks = array(
     'section_banner' => 'banner/banner_container.php',
-    'section_menu' => 'menu/featured_menu_item_container.php'
+    'section_menu' => 'menu/grid_items_container.php'
   );
   public static function display($field_name = 'sections', $sec_param = null) {
     while (have_rows($field_name, $sec_param)):

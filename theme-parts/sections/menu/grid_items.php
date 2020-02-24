@@ -5,8 +5,8 @@
 */
 global $post;
 $posts = get_sub_field('menu');
-$button_text = get_sub_field('menu_button_text');
-$button_icon = get_sub_field('menu_button_icon');
+$button_text = get_field('text', 'option');
+$button_icon = get_field('icon', 'option');
 
 if( $posts ): ?>
   <?php foreach( $posts as $post): ?>

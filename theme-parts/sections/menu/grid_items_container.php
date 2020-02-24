@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="row">
-        <?php require_once 'featured_menu_items.php';?>
+        <?php require_once 'grid_items.php';?>
       </div>
     </div>
   </section>
