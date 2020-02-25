@@ -1,6 +1,6 @@
 <?php
 /*
-  Template grid item menu 
+  Template grid item type
   @package Dingo
 */
 $button_text = get_field('text', 'option');
@@ -25,7 +25,7 @@ $button_icon = get_field('icon', 'option');?>
       if(!empty($button_text)):?>
         <a href="<?php the_permalink();?>" class="btn_3">
           <?php echo $button_text;?>
-          <?php echo get_images_attr($button_icon);?>
+          <?php echo dingo_get_images_attr($button_icon);?>
         </a><?php
       endif;?>
     </div>

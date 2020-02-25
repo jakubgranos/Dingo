@@ -4,17 +4,17 @@
   @package Dingo
 */
 
-function menu_post_type() {
+function menu_card_post_type() {
   $labels = array(
-    'name' => 'Menu',
-    'singular_name' => 'Menu',
+    'name' => 'Menu cards',
+    'singular_name' => 'Menu cards',
     'add_new' => 'Add post',
     'all_items' => 'All posts',
     'add_new_item' => 'Add post',
     'edit_titem' => 'Edit Post',
     'new_item' => 'New Post',
     'view_item' => 'View Post',
-    'search_item' => 'Search menu posts',
+    'search_item' => 'Search menu cards posts',
     'not_found' => 'No posts found',
     'not_found_in_trash' => 'No posts found in trash',
     'parent_item_colon' => 'Parent Post'
@@ -39,6 +39,6 @@ function menu_post_type() {
     'menu_position' => 4,
     'exclude_from_search' => false
   );
-  register_post_type('menu', $args);
+  register_post_type('menu_cards', $args);
 }
-add_action('init','menu_post_type');
+add_action('init','menu_card_post_type');

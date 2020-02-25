@@ -9,7 +9,7 @@ $walker = new Dingo_Walker_header_nav;?>
 
 <?php if (!empty($logo)): ?>
   <a class="navbar-brand" href="<?php echo get_home_url();?>">
-    <?php echo get_images_attr($logo);?>
+    <?php echo dingo_get_images_attr($logo);?>
   </a>
 <?php endif;?>
 
