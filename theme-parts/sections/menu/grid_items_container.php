@@ -3,10 +3,10 @@
   Template for menu container 
   @package Dingo
 */
-$menu = get_sub_field('grid_menu');
-$heading = get_sub_field('grid_heading');
-$subheading = get_sub_field('grid_subheading');
-$overlay = get_sub_field('grid_overlay');
+$menu = get_sub_field('menu');
+$heading = get_sub_field('heading');
+$subheading = get_sub_field('subheading');
+$overlay = get_sub_field('overlay');
 
 if(!empty($menu)):?>
   <style> <?php
