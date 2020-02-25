@@ -4,20 +4,20 @@
   @package Dingo
 */
 
-function menu_card_post_type() {
+function menu_item_post_type() {
   $labels = array(
-    'name' => 'Menu cards',
-    'singular_name' => 'Menu cards',
-    'add_new' => 'Add post',
-    'all_items' => 'All posts',
-    'add_new_item' => 'Add post',
-    'edit_titem' => 'Edit Post',
-    'new_item' => 'New Post',
-    'view_item' => 'View Post',
-    'search_item' => 'Search menu cards posts',
-    'not_found' => 'No posts found',
-    'not_found_in_trash' => 'No posts found in trash',
-    'parent_item_colon' => 'Parent Post'
+    'name' => 'Menu Items',
+    'singular_name' => 'Menu Items',
+    'add_new' => 'Add item',
+    'all_items' => 'All Items',
+    'add_new_item' => 'Add item',
+    'edit_titem' => 'Edit item',
+    'new_item' => 'New item',
+    'view_item' => 'View item',
+    'search_item' => 'Search items',
+    'not_found' => 'No items found',
+    'not_found_in_trash' => 'No items found in trash',
+    'parent_item_colon' => 'Parent item'
   );
   $args = array(
     'labels' => $labels,
@@ -39,6 +39,6 @@ function menu_card_post_type() {
     'menu_position' => 4,
     'exclude_from_search' => false
   );
-  register_post_type('menu_cards', $args);
+  register_post_type('menu_items', $args);
 }
-add_action('init','menu_card_post_type');
+add_action('init','menu_item_post_type');
