@@ -6,7 +6,7 @@
 
 class PageSections {
   private static $blocks = array(
-    'section_banner' => 'banner/banner_container.php',
+    'section_banner' => 'banner/banner-container.php',
     'section_grid' => 'grid/grid-items-container.php'
   );
   public static function display($field_name = 'sections', $sec_param = null) {
