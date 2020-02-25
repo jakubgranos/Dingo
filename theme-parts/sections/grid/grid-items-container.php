@@ -6,15 +6,15 @@
 $cards = get_sub_field('cards');
 $heading = get_sub_field('heading');
 $subheading = get_sub_field('subheading');
-$overlay = get_sub_field('overlay');?>
-<style> <?php
-  if(!empty($overlay)):?>
+$overlay = get_sub_field('overlay');
+if(!empty($overlay)):?> 
+  <style>
     .exclusive_item_part:after {
       background: url('<?php echo $overlay;?>')bottom right no-repeat;
       background-size: 15% 65%;
-    }<?php
-  endif;?>
-</style>
+    }
+  </style> <?php
+endif;?>
 <section class="exclusive_item_part blog_item_section">
   <div class="container">
     <div class="row">
@@ -30,7 +30,7 @@ $overlay = get_sub_field('overlay');?>
         </div>
       </div>
     </div>
-    <div class="row"><?php
+    <div class="row"> <?php
       if(!empty($cards)):
         require_once 'grid-items.php';
       endif;?>
