@@ -3,7 +3,8 @@
   Template grid item menu 
   @package Dingo
 */
-?>
+$button_text = get_field('text', 'option');
+$button_icon = get_field('icon', 'option');?>
 <div class="col-sm-6 col-lg-4">
   <div class="single_blog_item"> <?php
     if(has_post_thumbnail()):?>
