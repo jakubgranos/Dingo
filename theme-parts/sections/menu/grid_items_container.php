@@ -2,11 +2,11 @@
 /*
   Template for menu container 
   @package Dingo
-  */
-  $menu = get_sub_field('menu');
-  $heading = get_sub_field('menu_heading');
-  $subheading = get_sub_field('menu_subheading');
-  $overlay = get_sub_field('menu_overlay');
+*/
+$menu = get_sub_field('menu');
+$heading = get_sub_field('menu_heading');
+$subheading = get_sub_field('menu_subheading');
+$overlay = get_sub_field('menu_overlay');
 ?>
 <?php if(!empty($menu)):?>
   <style>
