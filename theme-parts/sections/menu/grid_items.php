@@ -35,7 +35,7 @@ if( $posts ): ?>
               <?php if(!empty($button_text)):?>
                 <a href="<?php the_permalink();?>" class="btn_3">
                   <?php echo $button_text;?>
-                  <img src="<?php echo $button_icon ?>" alt="button icon">
+                  <?php echo get_images_attr($button_icon);?>
                 </a>
               <?php endif;?>
             </div>
