@@ -12,7 +12,6 @@ function banner_post_repeater() {
       $link_text = $link['title'];
 
       $icon = get_sub_field('icon');
-      //var_dump($icon);
       // use reservation class for animated border
       if($type === 'Animated border'):
         $link_args = [
