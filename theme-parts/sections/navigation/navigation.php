@@ -9,7 +9,7 @@ $walker = new Dingo_Walker_header_nav;?>
 
 <?php if (!empty($logo)): ?>
   <a class="navbar-brand" href="<?php echo get_home_url();?>">
-    <?php echo dingo_get_images_attr($logo);?>
+    <?php echo dingo_render_acf_image($logo);?>
   </a>
 <?php endif;?>
 
@@ -25,4 +25,4 @@ $walker = new Dingo_Walker_header_nav;?>
   <div class="menu_btn">
     <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target'] ?>" class="btn_1 d-none d-sm-block"><?php echo $button['title']; ?></a>
   </div>
-<?php endif;?>
+<?php endif;
