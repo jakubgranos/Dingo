@@ -6,18 +6,18 @@
 
 function menu_item_post_type() {
   $labels = array(
-    'name' => 'Menu Items',
-    'singular_name' => 'Menu Items',
-    'add_new' => 'Add Item',
-    'all_items' => 'All Items',
-    'add_new_item' => 'Add Item',
-    'edit_titem' => 'Edit Item',
-    'new_item' => 'New Item',
-    'view_item' => 'View Item',
-    'search_item' => 'Search Items',
-    'not_found' => 'No Items found',
-    'not_found_in_trash' => 'No Items found in trash',
-    'parent_item_colon' => 'Parent Item'
+    'name' => 'Menu items',
+    'singular_name' => 'Menu item',
+    'add_new' => 'Add item',
+    'all_items' => 'All items',
+    'add_new_item' => 'Add item',
+    'edit_titem' => 'Edit item',
+    'new_item' => 'New item',
+    'view_item' => 'View item',
+    'search_item' => 'Search items',
+    'not_found' => 'No items found',
+    'not_found_in_trash' => 'No items found in trash',
+    'parent_item_colon' => 'Parent item'
   );
   $args = array(
     'labels' => $labels,
