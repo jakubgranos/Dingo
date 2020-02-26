@@ -11,13 +11,14 @@ function banner_post_repeater() {
       $link = get_sub_field_object('link')['value'];
       $link_text = $link['title'];
 
-      $icon = get_sub_field_object('icon')['value'];
-  
+      $icon = get_sub_field('icon');
+      $icon_url = $icon['url'];
+      $icon_alt = $icon['alt'];
       // use reservation class for animated border
       if($type === 'Animated border'):
         $link_args = [
           'class' => 'btn_2',
-          'content' => "$link_text<img src='$icon' alt='flag icon'/>",
+          'content' => "$link_text<img src='$icon_url' alt='$icon_alt'/>",
         ];?>
         <div class="banner_btn_iner">
           <?php echo wpc_get_link($link, $link_args); ?>
@@ -29,7 +30,7 @@ function banner_post_repeater() {
       if($type === 'Icon with label'):
         $ink_args = [
           'class' => 'popup-youtube video_popup',
-          'content' => "<span><img src='$icon' alt='icon play button'></span>$link_text",
+          'content' => "<span><img src='$icon_url' alt='$icon_alt'></span>$link_text",
         ];?>
           <?php echo wpc_get_link($link, $ink_args); ?>
       <?php
