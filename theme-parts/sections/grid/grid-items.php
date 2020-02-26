@@ -8,9 +8,9 @@ $cards = get_sub_field('cards');
 foreach($cards as $post):
   setup_postdata($post);
   $post_type = get_post_type($post);
-  switch($post_types) {
+  switch($post_type) {
     case 'menu_items':
-      require_once 'grid-type/grid-type-menu-card.php';
+      require 'grid-type/grid-type-menu-card.php';
       break;
     case 'page':
       // this is for item in page

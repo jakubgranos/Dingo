@@ -4,7 +4,8 @@
   @package Dingo
 */
 $button_text = get_field('text', 'option');
-$button_icon = get_field('icon', 'option');?>
+$button_icon = get_field('icon', 'option');
+$description = get_field('description');?>
 <div class="col-sm-6 col-lg-4">
   <div class="single_blog_item"> <?php
     if(has_post_thumbnail()):?>
@@ -18,8 +19,8 @@ $button_icon = get_field('icon', 'option');?>
         <h3><?php the_title(); ?></h3> <?php
       endif;
 
-      if(get_the_excerpt()):?>
-        <p><?php the_excerpt(); ?></p> <?php
+      if(!empty($description)):?>
+        <p><?php echo $description; ?></p> <?php
       endif;
 
       if(!empty($button_text)):?>

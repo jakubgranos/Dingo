@@ -31,7 +31,6 @@ function menu_item_post_type() {
     'supports' => array(
       'title',
       'editor',
-      'excerpt',
       'thumbnail',
       'revisions'
     ),
