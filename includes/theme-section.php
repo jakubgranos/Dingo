@@ -14,7 +14,7 @@ class PageSections {
       the_row();
       $block_layout = get_row_layout();
       if (isset(self::$blocks[$block_layout])):
-        require_once get_template_directory() . "/theme-parts/sections/" . self::$blocks[$block_layout];
+        require get_template_directory() . "/theme-parts/sections/" . self::$blocks[$block_layout];
       endif;
     endwhile;
   }
