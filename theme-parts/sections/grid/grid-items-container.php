@@ -32,7 +32,7 @@ endif;?>
     </div>
     <div class="row"> <?php
       if(!empty($cards)):
-        require_once 'grid-items.php';
+        require 'grid-items.php';
       endif;?>
     </div>
   </div>
