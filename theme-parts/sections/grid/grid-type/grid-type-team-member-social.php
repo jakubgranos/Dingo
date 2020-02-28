@@ -1,3 +1,9 @@
+<?php
+/*
+  Template grid type team members social
+  @package Dingo
+*/
+?>
 <div class="social_icon"> <?php
   if(have_rows('social_media')):
     while (have_rows('social_media')) : the_row();
