@@ -12,8 +12,8 @@ foreach($cards as $post):
     case 'menu_items':
       require 'grid-type/grid-type-menu-card.php';
       break;
-    case 'page':
-      // this is for item in page
+    case 'team_members':
+      require 'grid-type/grid-type-team-members.php';
       break;
   }     
 endforeach;
