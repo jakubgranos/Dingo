@@ -3,7 +3,7 @@
   Template grid type team members
   @package Dingo
 */
-$job_title = get_field('job_title');?>
+$categories = get_the_category();?>
 <div class="col-sm-6 col-lg-4 chefs_part">
   <div class="single_blog_item">
     <div class="single_blog_img"> <?php
@@ -18,8 +18,11 @@ $job_title = get_field('job_title');?>
     <div class="single_blog_text text-center">
       <a href="<?php the_permalink();?>"> 
         <h3><?php the_title();?></h3> <?php
-        if(!empty($job_title)):?>
-          <p><?php echo $job_title;?></p> <?php
+        if(!empty($categories)):
+          foreach($categories as $category):
+            $category_name = $category->name;?>
+            <p><?php echo $category_name?></p> <?php
+          endforeach;
         endif;?>
       </a>
       <div class="social_icon"> <?php
