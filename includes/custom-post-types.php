@@ -68,11 +68,10 @@ function team_members_post_type() {
     'hierarchical' => false,
     'supports' => array(
       'title',
-      'editor',
       'thumbnail',
       'revisions'
     ),
-    'taxonomies' => array('category','post_tag'),
+    'taxonomies' => array('category'),
     'menu_position' => 5,
     'exclude_from_search' => false
   );
