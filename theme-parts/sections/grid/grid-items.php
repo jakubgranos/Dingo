@@ -13,7 +13,7 @@ foreach($cards as $post):
       require 'grid-type/grid-type-menu-card.php';
       break;
     case 'team_member':
-      require 'grid-type/grid-type-team-members.php';
+      require 'grid-type/grid-type-team-member.php';
       break;
   }     
 endforeach;

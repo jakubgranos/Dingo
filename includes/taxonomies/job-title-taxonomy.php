@@ -1,10 +1,9 @@
 <?php
 /*
-  Theme custom taxonomies
+  Template for taxonomy job title
   @package Dingo
 */
-
-function dingo_custom_taxonomies() {
+function dingo_job_title_taxonomy() {
   $labels = array(
     'name' => 'Jobs title',
     'singular_name' => 'Job title',
@@ -18,16 +17,15 @@ function dingo_custom_taxonomies() {
     'new_item_name' => 'New title Name',
     'menu_name' => 'Jobs title',
   );
-
-  $args = array(
+  register_taxonomy('jobs_title', array('team_member'), array(
     'hierarchical' => true,
     'labels' => $labels,
     'show_ui' => true,
     'show_admin_column' => true,
     'query_var' => true,
     'rewrite' => array('slug' => 'jobs_title')
-  );
-  register_taxonomy('jobs_title', array('team_member'), $args);
-  $custom_tax_mb = new Taxonomy_Single_Term( 'jobs_title', array('team_members'), 'select');
+  ));
+  $dingo_job_title_taxonomy_select = new Taxonomy_Single_Term( 'jobs_title', array('team_member'), 'select');
 }
-add_action('init', 'dingo_custom_taxonomies');
+
+add_action('init', 'dingo_job_title_taxonomy');

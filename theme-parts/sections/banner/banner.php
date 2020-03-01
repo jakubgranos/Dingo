@@ -13,7 +13,7 @@
       endif;
     ?>
     <div class="banner_btn">
-      <?php echo banner_post_repeater();?>
+      <?php require_once 'banner-post-repeater.php';?>
     </div>
   </div>
 </div>

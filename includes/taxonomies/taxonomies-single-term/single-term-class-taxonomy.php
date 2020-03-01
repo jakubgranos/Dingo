@@ -589,7 +589,7 @@ class Taxonomy_Single_Term {
 		if ( $this->walker ) {
 			return $this->walker;
 		}
-		require_once( 'walker.taxonomy-single-term.php' );
+		require_once( 'single-term-walker-taxonomy.php' );
 		$this->walker = new Taxonomy_Single_Term_Walker( $this->taxonomy()->hierarchical, $this->input_element );
 
 		return $this->walker;
