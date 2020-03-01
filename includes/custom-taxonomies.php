@@ -28,5 +28,6 @@ function dingo_custom_taxonomies() {
     'rewrite' => array('slug' => 'jobs_title')
   );
   register_taxonomy('jobs_title', array('team_members'), $args);
+  $custom_tax_mb = new Taxonomy_Single_Term( 'jobs_title', array('team_members'), 'select');
 }
 add_action('init', 'dingo_custom_taxonomies');
