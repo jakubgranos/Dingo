@@ -1,6 +1,6 @@
 <?php
 /*
-  Theme support file
+  Theme acf render image
   @package Dingo
 */
 
