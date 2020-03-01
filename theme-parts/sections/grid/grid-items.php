@@ -9,11 +9,11 @@ foreach($cards as $post):
   setup_postdata($post);
   $post_type = get_post_type($post);
   switch($post_type) {
-    case 'menu_items':
+    case 'menu_item':
       require 'grid-type/grid-type-menu-card.php';
       break;
-    case 'page':
-      // this is for item in page
+    case 'team_member':
+      require 'grid-type/grid-type-team-member.php';
       break;
   }     
 endforeach;

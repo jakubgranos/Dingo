@@ -25,7 +25,7 @@ $description = get_field('description');?>
 
       if(!empty($button_text)):?>
         <a href="<?php the_permalink();?>" class="btn_3">
-          <?php echo $button_text; echo dingo_render_acf_image($button_icon);?>
+          <?php echo $button_text; echo dingo_acf_render_image($button_icon);?>
         </a> <?php
       endif;?>
     </div>

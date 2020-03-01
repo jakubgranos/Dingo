@@ -2966,6 +2966,7 @@ ul {
 .exclusive_item_part {
   position: relative;
   z-index: 1;
+  margin-top: 70px;
 }
 
 /* line 5, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_exclusive_item_part.scss */

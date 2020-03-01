@@ -1,9 +1,8 @@
 <?php
 /*
-  Theme custom post type
+  Template for custom post type menu
   @package Dingo
 */
-
 function menu_item_post_type() {
   $labels = array(
     'name' => 'Menu items',
@@ -19,7 +18,7 @@ function menu_item_post_type() {
     'not_found_in_trash' => 'No items found in trash',
     'parent_item_colon' => 'Parent item'
   );
-  $args = array(
+  register_post_type('menu_item', array(
     'labels' => $labels,
     'public' => true,
     'has_archive' => true,
@@ -37,7 +36,6 @@ function menu_item_post_type() {
     'taxonomies' => array('category','post_tag'),
     'menu_position' => 4,
     'exclude_from_search' => false
-  );
-  register_post_type('menu_items', $args);
+  ));
 }
 add_action('init','menu_item_post_type');

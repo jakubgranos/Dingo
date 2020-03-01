@@ -1,6 +1,6 @@
 <?php
 /*
-  Template for banner
+  Template for acf helpers
   @package Dingo
 */
 function wpc_get_link($acf_link, $args = null) {
