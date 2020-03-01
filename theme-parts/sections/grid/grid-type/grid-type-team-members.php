@@ -19,19 +19,19 @@ $jobs_title = wp_get_post_terms($post->ID, 'jobs_title');?>
       <a href="<?php the_permalink();?>"> 
         <h3><?php the_title();?></h3> <?php
         if(!empty($jobs_title)):
-          foreach($jobs_title as $job_title):
-            $job_title_name = $job_title->name;?>
-            <p><?php echo $job_title_name?></p> <?php
+          foreach($jobs_title as $job_title):?>
+            <p><?php echo $job_title->name?></p> <?php
           endforeach;
         endif;?>
       </a>
       <div class="social_icon"> <?php
         if(have_rows('social_media')):
-          while (have_rows('social_media')) : the_row();
-            $link = get_sub_field('link');
+          while (have_rows('social_media')): the_row();
+            $url = get_sub_field('url');
             $icon = get_sub_field('icon');
-            if(!empty($link)):?>
-              <a href="<?php echo $link;?>"><i class="ti-<?php echo $icon;?>"></i></a> <?php
+            if(!empty($url)):
+              $url_args = ['content' => "<i class='ti-$icon'></i>"];
+              echo wpc_get_link($url, $url_args);
             endif;
           endwhile;
         endif;?>
