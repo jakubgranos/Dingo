@@ -5,7 +5,7 @@
 */
 
 // fucnction for grab source and alt for global use  
-function acf_render_my_image($field) {
+function dingo_acf_render_image($field) {
   if(empty($field)) { return null; }
   
   $url = $field['url'];
