@@ -38,7 +38,7 @@ function menu_item_post_type() {
     'menu_position' => 4,
     'exclude_from_search' => false
   );
-  register_post_type('menu_items', $args);
+  register_post_type('menu_item', $args);
 }
 add_action('init','menu_item_post_type');
 
@@ -75,6 +75,6 @@ function team_members_post_type() {
     'menu_position' => 5,
     'exclude_from_search' => false
   );
-  register_post_type('team_members', $args);
+  register_post_type('team_member', $args);
 }
 add_action('init','team_members_post_type');
