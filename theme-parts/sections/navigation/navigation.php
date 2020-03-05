@@ -7,11 +7,20 @@ $logo = get_field('theme_logo', 'option');
 $button = get_field('theme_nav_button', 'option');
 $walker = new Dingo_Walker_header_nav;?>
 
-<?php if (!empty($logo)): ?>
-  <a class="navbar-brand" href="<?php echo get_home_url();?>">
-    <?php echo dingo_acf_render_image($logo);?>
-  </a>
-<?php endif;?>
+<?php
+  switch($logo) {
+    case 'image':
+      $logo_image = get_field('logo_image', 'option');?>
+      <a class="navbar-brand" href="<?php echo get_home_url();?>">
+        <?php echo dingo_acf_render_image($logo_image);?>
+      </a> <?php
+      break;
+    case 'text':
+      $logo_text = get_field('logo_text', 'option');?>
+      <h5><?php echo $logo_text;?></h5> <?php
+      break;
+  }
+?>
 
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
