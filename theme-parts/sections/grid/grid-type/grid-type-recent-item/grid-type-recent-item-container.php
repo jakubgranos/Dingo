@@ -3,9 +3,9 @@
   Template for grid recent items container
   @package Dingo
 */
-$heading =  get_sub_field('heading');
-$subheading =  get_sub_field('subheading');?>
-<section class="exclusive_item_part blog_item_section">
+$heading = get_sub_field('heading');
+$subheading = get_sub_field('subheading');?>
+<section class="blog_item_section blog_section section_padding">
   <div class="container">
     <div class="row">
       <div class="col-xl-5">

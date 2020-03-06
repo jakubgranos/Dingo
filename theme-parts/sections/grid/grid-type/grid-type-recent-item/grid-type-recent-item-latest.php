@@ -17,19 +17,25 @@ if($query->have_posts()):
     <div class="col-sm-6 col-lg-4">
       <div class="single_blog_item"> <?php
         if(has_post_thumbnail()):?>
-          <div class="single_blog_img">
-            <?php the_post_thumbnail();?>
-          </div> <?php 
+          <a href="<?php the_permalink();?>">
+            <div class="single_blog_img">
+              <?php the_post_thumbnail();?>
+            </div> 
+          </a> <?php 
         endif;?>
 
-        <div class="single_blog_text"> <?php
-          if(get_the_title()):?>
-            <h3><?php the_title();?></h3> <?php
-          endif;
+        <div class="single_blog_text">
+          <?php echo dingo_posted_meta();?>
+          
+          <a href="<?php the_permalink();?>"> <?php
+            if(get_the_title()):?>
+              <h3><?php the_title();?></h3> <?php
+            endif;
 
-          if(!empty($description)):?>
-            <p><?php echo $description;?></p> <?php
-          endif;
+            if(!empty($description)):?>
+              <p><?php echo $description;?></p> <?php
+            endif;?>
+          </a> <?php
 
           if(!empty($button_text)):?>
             <a href="<?php the_permalink();?>" class="btn_3">
