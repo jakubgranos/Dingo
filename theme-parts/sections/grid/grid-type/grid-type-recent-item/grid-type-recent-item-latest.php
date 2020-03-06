@@ -1,6 +1,6 @@
 <?php
 /*
-  Template recent items latest
+  Template grid recent items latest
   @package Dingo
 */
 $post_type = ['team_member', 'menu_item', 'post'];

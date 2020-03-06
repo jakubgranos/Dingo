@@ -1,6 +1,6 @@
 <?php
 /*
-  Template for recent items container
+  Template for grid recent items container
   @package Dingo
 */
 $heading =  get_sub_field('heading');
@@ -21,7 +21,7 @@ $subheading =  get_sub_field('subheading');?>
       </div>
     </div>
     <div class="row"> <?php
-      require 'recent-items.php';?>
+      require 'grid-type-recent-item.php';?>
     </div>
   </div>
 </section>
