@@ -20,12 +20,8 @@ if(!empty($cards)):
   
         <div class="single_blog_text">
           <?php echo dingo_posted_meta_function();?>
-          
-          <a href="<?php the_permalink();?>"> <?php
-            if(get_the_title()):?>
-              <h3><?php the_title();?></h3> <?php
-            endif;
-
+          <a href="<?php the_permalink();?>">
+            <h3><?php the_title();?></h3> <?php
             if(!empty($description)):?>
               <p><?php echo $description;?></p> <?php
             endif;?>

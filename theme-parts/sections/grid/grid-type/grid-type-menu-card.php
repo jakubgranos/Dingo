@@ -14,11 +14,8 @@ $description = get_field('description');?>
       </div> <?php 
     endif;?>
 
-    <div class="single_blog_text"> <?php
-      if(get_the_title()):?>
-        <h3><?php the_title(); ?></h3> <?php
-      endif;
-
+    <div class="single_blog_text">
+      <h3><?php the_title(); ?></h3> <?php
       if(!empty($description)):?>
         <p><?php echo $description; ?></p> <?php
       endif;
