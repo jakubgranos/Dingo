@@ -1,6 +1,9 @@
 <?php
-
-function dingo_posted_meta() {
+/*
+  Template for dingo posted meta function
+  @package Dingo
+*/
+function dingo_posted_meta_function() {
   $categories = get_the_category();
   $date = get_the_date();
   if(!empty($categories)):
