@@ -5600,7 +5600,6 @@ h6 {
   color: #2c3033;
   line-height: 1.458;
   font-weight: 700;
-  margin-top: 20px;
   margin-bottom: 0px;
 }
 
@@ -5628,6 +5627,7 @@ h6 {
 /* line 121, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_blog_part.scss */
 .blog_section .single_blog_text .btn_3 {
   margin-top: 25px;
+  font-weight: normal;
 }
 
 /* line 123, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_blog_part.scss */
