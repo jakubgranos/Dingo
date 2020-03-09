@@ -1,7 +1,11 @@
 <?php
+/*
+  Template render items
+  @package Dingo
+*/
 
-function do_the_fucking_render($post_type) {
-  switch($post_type) {
+function render_items( $post_type ) {
+  switch( $post_type ) {
     case 'menu_item':
       require 'grid-items/menu-card.php';
       break;
@@ -12,5 +16,4 @@ function do_the_fucking_render($post_type) {
       require 'grid-items/post-item.php';
       break;
   }  
-
 }

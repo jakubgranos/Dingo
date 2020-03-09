@@ -3,10 +3,11 @@
   Template for grid items container 
   @package Dingo
 */
-$cards = get_sub_field('cards');
-$heading = get_sub_field('heading');
-$subheading = get_sub_field('subheading');
-$overlay = get_sub_field('overlay');
+$cards = get_sub_field( 'cards' );
+$heading = get_sub_field( 'heading' );
+$subheading = get_sub_field( 'subheading' );
+$overlay = get_sub_field( 'overlay' );
+$display_posts = get_sub_field( 'display_posts' ); 
 
 if( !empty( $overlay ) ):?> 
   <style>
@@ -16,7 +17,7 @@ if( !empty( $overlay ) ):?>
     }
   </style> <?php
 endif;?>
-<section class="exclusive_item_part blog_item_section">
+<section class="exclusive_item_part blog_item_section blog_section">
   <div class="container">
     <div class="row">
       <div class="col-xl-5">
@@ -33,14 +34,14 @@ endif;?>
     </div>
     <div class="row"> <?php
       if( !empty( $cards ) ):
-        $display_posts = get_sub_field( 'display_posts' ); 
-        if($display_posts === 'manual'):
-          require 'relationship-items.php';
-        endif;
-
-        if($display_posts === 'latest'):
-          require 'latest-items.php';
-        endif;
+        switch( $display_posts ) {
+          case 'manual':
+            require 'relationship-items.php';
+            break;
+          case 'latest':
+            require 'relationship-items.php';
+            break;
+        }
       endif;?>
     </div>
   </div>
