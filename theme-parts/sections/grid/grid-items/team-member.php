@@ -3,6 +3,7 @@
   Template grid type team members
   @package Dingo
 */
+global $post;
 $jobs_title = wp_get_post_terms( $post->ID, 'jobs_title' );?>
 
 <div class="col-sm-6 col-lg-4 chefs_part">
@@ -28,13 +29,13 @@ $jobs_title = wp_get_post_terms( $post->ID, 'jobs_title' );?>
       </a>
 
       <div class="social_icon"> <?php
-        if(have_rows('social_media')):
-          while (have_rows('social_media')): the_row();
-            $url = get_sub_field('url');
-            $icon = get_sub_field('icon');
-            if(!empty($url)):
+        if( have_rows( 'social_media' ) ):
+          while ( have_rows( 'social_media' ) ): the_row();
+            $url = get_sub_field( 'url' );
+            $icon = get_sub_field( 'icon' );
+            if( !empty( $url ) ):
               $url_args = ['content' => "<i class='ti-$icon'></i>"];
-              echo wpc_get_link($url, $url_args);
+              echo wpc_get_link( $url, $url_args );
             endif;
           endwhile;
         endif;?>
