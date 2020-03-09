@@ -13,3 +13,4 @@ function dingo_posted_meta_function() {
   endif;
   return '<div class="date"> <span class="date_item">' . $date . '</span> ' . $output . ' </div>';
 }
+

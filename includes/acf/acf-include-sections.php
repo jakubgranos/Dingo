@@ -8,7 +8,6 @@ class PageSections {
   private static $blocks = array(
     'section_banner' => 'banner/banner-container.php',
     'section_grid' => 'grid/grid-items-container.php',
-    'section_recent' => 'grid/grid-type/grid-type-recent-item/grid-type-recent-item-container.php'
   );
   public static function display($field_name = 'sections', $sec_param = null) {
     while (have_rows($field_name, $sec_param)):
