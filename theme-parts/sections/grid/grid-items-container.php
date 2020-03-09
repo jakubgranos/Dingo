@@ -39,7 +39,7 @@ endif;?>
             require 'relationship-items.php';
             break;
           case 'latest':
-            require 'relationship-items.php';
+            require 'latest-items.php';
             break;
         }
       endif;?>
