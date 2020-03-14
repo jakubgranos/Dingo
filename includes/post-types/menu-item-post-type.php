@@ -18,7 +18,7 @@ function menu_item_post_type() {
     'not_found_in_trash' => 'No items found in trash',
     'parent_item_colon' => 'Parent item'
   );
-  register_post_type('menu_item', array(
+  register_post_type( 'menu_item', array(
     'labels' => $labels,
     'public' => true,
     'has_archive' => true,
@@ -33,9 +33,9 @@ function menu_item_post_type() {
       'thumbnail',
       'revisions'
     ),
-    'taxonomies' => array('category','post_tag'),
+    'taxonomies' => array( 'category','post_tag' ),
     'menu_position' => 4,
     'exclude_from_search' => false
   ));
 }
-add_action('init','menu_item_post_type');
+add_action( 'init','menu_item_post_type' );

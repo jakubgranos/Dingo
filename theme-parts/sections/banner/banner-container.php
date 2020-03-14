@@ -3,17 +3,17 @@
   Template for banner container part
   @package Dingo
 */
-$bg_image = get_sub_field('background_image');
-$overlay_image = get_sub_field('backgorund_overlay_image');?>
+$bg_image = get_sub_field( 'background_image' );
+$overlay_image = get_sub_field( 'backgorund_overlay_image' );?>
 
 <style>
-  <?php if (!empty($bg_image)): ?>
+  <?php if( !empty( $bg_image ) ): ?>
     .banner_part {
-      background-image: url('<?php echo $bg_image; ?>');
+      background-image: url( '<?php echo $bg_image; ?>' );
     }
   <?php endif;?>
   
-  @media (max-width: 991px) {
+  @media ( max-width: 991px ) {
     .banner_part {
       height: 700px;
       background-image: none;
@@ -21,9 +21,9 @@ $overlay_image = get_sub_field('backgorund_overlay_image');?>
     }
   }
 
-  <?php if (!empty($overlay_image)): ?>
+  <?php if ( !empty( $overlay_image ) ): ?>
     .banner_part:after {
-      background-image: url('<?php echo $overlay_image; ?>');
+      background-image: url( '<?php echo $overlay_image; ?>' );
     }
   <?php endif;?>
 </style>

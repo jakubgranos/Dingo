@@ -18,7 +18,7 @@ function team_members_post_type() {
     'not_found_in_trash' => 'No members found in trash',
     'parent_item_colon' => 'Parent members'
   );
-  register_post_type('team_member', array(
+  register_post_type( 'team_member', array(
     'labels' => $labels,
     'public' => true,
     'has_archive' => true,
@@ -32,9 +32,9 @@ function team_members_post_type() {
       'thumbnail',
       'revisions'
     ),
-    'taxonomies' => array('category'),
+    'taxonomies' => array( 'category' ),
     'menu_position' => 5,
     'exclude_from_search' => false
   ));
 }
-add_action('init','team_members_post_type');
+add_action( 'init','team_members_post_type' );
