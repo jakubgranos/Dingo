@@ -19,7 +19,7 @@ function dingo_button_shortcode( $atts, $content = null ) {
     'target' => ''
   ), $atts );
 
-  $output = "<a href='{ $values[ 'url' ] }' target='{ $values[ 'target' ] }' class='btn_3'>{ $content } <img src='{ $get_icon_url }' alt='{ $get_icon_alt }'></a>";
+  $output = "<a href='{$values[ 'url' ]}' target='{$values[ 'target' ]}' class='btn_3'>{$content} <img src='{$get_icon_url}' alt='{$get_icon_alt}'></a>";
   return $output;
 }
 
