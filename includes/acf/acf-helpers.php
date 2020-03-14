@@ -17,12 +17,12 @@ function wpc_get_link( $acf_link, $args = null) {
 
   // Set link class
   if ( !empty( $args[ 'class' ] ) ) {
-    $class = "class='{ $args[ 'class' ] }'";
+    $class = "class='{$args[ 'class' ]}'";
   }
 
   // Set link id
   if ( !empty( $args[ 'id' ] ) ) {
-    $id = "id='{ $args[ 'id' ] }'";
+    $id = "id='{$args[ 'id' ]}'";
   }
 
   // Set link title. If title is not set then URL will be used instead
@@ -34,7 +34,7 @@ function wpc_get_link( $acf_link, $args = null) {
   
   // Set link target
   if ( !empty( $target ) ) {
-    $target = "target='{ $target }'";
+    $target = "target='{$target}'";
   }
 
   // Set custom content
@@ -42,6 +42,6 @@ function wpc_get_link( $acf_link, $args = null) {
     $content = $args[ 'content' ];
   }
 
-  $link = "<a href='{ $url }' { $target } { $class } { $id }>{ $content }</a>";
+  $link = "<a href='{$url}' {$target} {$class} {$id}>{$content}</a>";
   return $link;
 }
