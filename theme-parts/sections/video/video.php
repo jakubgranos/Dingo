@@ -5,22 +5,20 @@
 */
 $heading = get_sub_field( 'heading' );
 $link = get_sub_field( 'link' );
-$icon = get_sub_field( 'icon' );
-$background_image = get_sub_field( 'background_image' );?>
+$icon = get_sub_field( 'icon' );?>
 
-<section class="intro_video_bg">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-          <div class="intro_video_iner text-center">
-            <h2><?php echo $heading; ?></h2>
-            <div class="intro_video_icon">
-              <a id="play-video_1" class="video-play-button popup-youtube" href="https://www.youtube.com/watch?v=pBFQdxA-apI">
-              <span class="ti-control-play"></span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="intro_video_iner text-center"> <?php
+  if( !empty( $heading ) ): ?>
+    <h2><?php echo $heading; ?></h2> <?php
+  endif;?>
+
+  <div class="intro_video_icon"> <?php
+    if( !empty( $link ) ): ?>
+      <a id="play-video_1" class="video-play-button popup-youtube" href="<?php echo $link; ?>"> <?php
+        if( !empty( $icon ) ):
+          echo dingo_acf_render_image( $icon, 'video-play-button-icon' );
+        endif; ?>
+      </a> <?php
+    endif;?>
   </div>
-</section>
+</div>

@@ -45,5 +45,13 @@
     position: inherit;
   }
 }
+.video-play-button-icon {
+  display: inline-block;
+  position: relative;
+  z-index: 3;
+  top: 8px;
+  cursor: pointer;
+  min-width: 15px;
+}
 
 /*# sourceMappingURL=dingo.css.map */
