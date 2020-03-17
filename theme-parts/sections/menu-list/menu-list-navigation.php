@@ -6,11 +6,10 @@
 $cat_args = array(
   'orderby' => 'name',
 );
-$button = get_field('button', 'option');
-?>
+$categories = get_categories( $cat_args );
+$button = get_field('button', 'option');?>
 <div class="col-lg-6">
   <div class="nav nav-tabs food_menu_nav" id="myTab" role="tablist"> <?php
-    $categories = get_categories( $cat_args );
     foreach( $categories as $category ):
       $cat_slug = $category->slug; 
       $cat_name = $category->name;
