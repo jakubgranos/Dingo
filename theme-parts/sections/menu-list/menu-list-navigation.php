@@ -3,22 +3,20 @@
   Template for menu list navigation
   @package Dingo
 */
-$cat_args = array(
-  'orderby' => 'name',
+
+$button = get_field( 'button', 'option' );
+$divisions_list_args = array(
+  'order' => 'DESC',
+  'taxonomy' => 'divisions_list'
 );
-$categories = get_categories( $cat_args );
-$button = get_field('button', 'option');?>
+$divisions_list = get_terms( $divisions_list_args );?>
+
 <div class="col-lg-6">
   <div class="nav nav-tabs food_menu_nav" id="myTab" role="tablist"> <?php
-    foreach( $categories as $category ):
-      $cat_slug = $category->slug; 
-      $cat_name = $category->name;
-      if($cat_slug === 'uncategorized'):
-        $cat_slug = '';
-      endif;?>
-      <a class="menu_list_nav" id="<?php echo $cat_slug?>-tab" data-toggle="tab" href="#<?php echo $cat_slug?>" role="tab" aria-controls="<?php echo $cat_slug?>" aria-selected="false"><?php echo $cat_slug?> <img src="<?php echo $button;?>" alt="play"></a> <?php
+    foreach( $divisions_list as $division_list ):
+      $division_list_slug = $division_list->slug; 
+      $division_list_name = $division_list->name;?>
+      <a class="menu_list_nav" id="<?php echo $division_list_slug?>-tab" data-toggle="tab" href="#<?php echo $division_list_slug?>" role="tab" aria-controls="<?php echo $division_list_slug?>" aria-selected="false"><?php echo $division_list_name?> <img src="<?php echo $button;?>" alt="play"></a> <?php
     endforeach;?>
   </div>
 </div>
-
-

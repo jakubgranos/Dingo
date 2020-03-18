@@ -33,7 +33,7 @@ function menu_item_post_type() {
       'thumbnail',
       'revisions'
     ),
-    'taxonomies' => array( 'category','post_tag' ),
+    'taxonomies' => array( 'post_tag' ),
     'menu_position' => 4,
     'exclude_from_search' => false
   ));
