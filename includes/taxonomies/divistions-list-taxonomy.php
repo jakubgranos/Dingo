@@ -25,7 +25,6 @@ function dingo_divisions_list_taxonomy() {
     'query_var' => true,
     'rewrite' => array('slug' => 'divisions_list')
   ));
-  //$dingo_division_list_taxonomy_select = new Taxonomy_Single_Term( 'jobs_title', array('team_member'), 'select');
 }
 
 add_action('init', 'dingo_divisions_list_taxonomy');
