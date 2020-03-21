@@ -3,7 +3,7 @@
   Template for menu list navigation
   @package Dingo
 */
-$division_args = array(
+$divisions_args = array(
   'order' => 'DESC',
   'taxonomy' => 'divisions_list'
 );
