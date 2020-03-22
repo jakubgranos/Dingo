@@ -7,7 +7,7 @@ $divisions_args = array(
   'order' => 'DESC',
   'taxonomy' => 'divisions_list'
 );
-$divisions = get_terms( $division_args );?>
+$divisions = get_terms( $divisions_args );?>
 
 <div class="col-lg-12">
   <div class="tab-content" id="myTabContent"><?php
