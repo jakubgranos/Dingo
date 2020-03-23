@@ -5,7 +5,8 @@
 */
 $heading = get_sub_field( 'heading' );
 $subheading = get_sub_field( 'subheading' );
-$backgorund = get_sub_field( 'backgorund' );?>
+$backgorund = get_sub_field( 'backgorund' );
+$contact_form = get_sub_field( 'contact_form' );?>
 
 <style> <?php 
   if ( !empty( $heading ) ): ?>
@@ -32,7 +33,9 @@ $backgorund = get_sub_field( 'backgorund' );?>
     <div class="row">
       <div class="col-lg-6">
         <div class="regervation_part_iner">
-          <?php require 'contact-form.php';?>
+          <form>
+            <?php echo $contact_form;?>
+          </form>
         </div>
       </div>
     </div>
