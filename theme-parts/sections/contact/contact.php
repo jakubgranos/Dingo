@@ -9,7 +9,7 @@ $backgorund = get_sub_field( 'backgorund' );
 $contact_form = get_sub_field( 'contact_form' );?>
 
 <style> <?php 
-  if ( !empty( $heading ) ): ?>
+  if( !empty( $heading ) ): ?>
     .regervation_part {
       background-image: url('<?php echo $backgorund?>');
     } <?php
@@ -20,11 +20,11 @@ $contact_form = get_sub_field( 'contact_form' );?>
     <div class="row">
       <div class="col-xl-5">
         <div class="section_tittle"> <?php 
-          if( !empty($heading) ): ?>
+          if( !empty( $heading ) ): ?>
             <p><?php echo $heading;?></p> <?php
           endif;
 
-          if( !empty($subheading) ): ?>
+          if( !empty( $subheading ) ): ?>
             <h2><?php echo $subheading;?></h2> <?php
           endif;?>
         </div>
