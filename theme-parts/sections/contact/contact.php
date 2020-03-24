@@ -32,8 +32,10 @@ $contact_form = get_sub_field( 'contact_form' );?>
     </div>
     <div class="row">
       <div class="col-lg-6">
-        <div class="regervation_part_iner">
-          <?php echo $contact_form;?>
+        <div class="regervation_part_iner"> <?php
+            if( !empty( $contact_form ) ):
+              echo $contact_form;
+            endif;?>
         </div>
       </div>
     </div>
