@@ -3800,7 +3800,8 @@ ul {
 
 /* line 13, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_regervation_part.scss */
 .regervation_part .regervation_part_iner input {
-  color: #888 !important;
+  color: white;
+  border: none;
 }
 
 /* line 16, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_regervation_part.scss */

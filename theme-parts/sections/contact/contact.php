@@ -33,9 +33,7 @@ $contact_form = get_sub_field( 'contact_form' );?>
     <div class="row">
       <div class="col-lg-6">
         <div class="regervation_part_iner">
-          <form>
-            <?php echo $contact_form;?>
-          </form>
+          <?php echo $contact_form;?>
         </div>
       </div>
     </div>
