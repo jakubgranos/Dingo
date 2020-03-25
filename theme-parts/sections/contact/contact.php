@@ -34,7 +34,7 @@ $contact_form = get_sub_field( 'contact_form' );?>
       <div class="col-lg-6">
         <div class="regervation_part_iner"> <?php
             if( !empty( $contact_form ) ):
-              echo $contact_form;
+              echo do_shortcode( $contact_form );
             endif;?>
         </div>
       </div>
