@@ -11,6 +11,7 @@ class PageSections {
     'section_hero' => 'hero/hero.php',
     'section_video' => 'video/video-container.php',
     'section_menu_list' => 'menu-list/menu-list-container.php',
+    'section_contact' => 'contact/contact.php',
   );
   public static function display( $field_name = 'sections', $sec_param = null) {
     while ( have_rows( $field_name, $sec_param ) ):
