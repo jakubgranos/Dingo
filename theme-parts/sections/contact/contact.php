@@ -9,7 +9,7 @@ $backgorund = get_sub_field( 'backgorund' );
 $contact_form = get_sub_field( 'contact_form' );?>
 
 <style> <?php 
-  if( !empty( $heading ) ): ?>
+  if( !empty( $backgorund ) ): ?>
     .regervation_part {
       background-image: url('<?php echo $backgorund?>');
     } <?php
