@@ -4,9 +4,10 @@
   @package Dingo
 */
 ?>
-<footer>
+<footer class="footer-area">
   <?php require 'theme-parts/sections/footer/footer.php';
-   wp_footer();?>
+  wp_footer();?>
+   
 </footer>
 </body>
 </html>
