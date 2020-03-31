@@ -10,5 +10,6 @@ function dingo_acf_render_image( $field, $class = null ) {
   
   $url = $field[ 'url' ];
   $alt = $field[ 'alt' ];
-  return "<img src='$url' alt='$alt' class='$class' />";
+  $target = $field[ 'target' ];
+  return "<img src='$url' alt='$alt' target='$target' class='$class' />";
 }
