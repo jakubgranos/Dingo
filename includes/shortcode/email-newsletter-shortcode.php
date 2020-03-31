@@ -5,9 +5,10 @@
 */
 
 function email_newsletter_shortcode( $atts, $content = null ) {
-  // demo hardcode email 
+  $email_icon = get_field( 'email_icon', 'option');
+
   $email = "<input type='text' class='form-control' placeholder='Email Address'>";
-  $icon = "<div class='input-group-append'><button class='btn' type='button'><i class='fas fa-paper-plane'></i></button></div>";
+  $icon = "<div class='input-group-append'><button class='btn' type='button'><i class='fas fa-{$email_icon}'></i></button></div>";
   $output = "<div class='input-group mb-3'>{$email} {$icon}</div>";
   return $output;
 }
